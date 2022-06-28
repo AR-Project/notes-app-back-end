@@ -47,7 +47,8 @@ const routes = [
     method: 'GET',
     path: '/',
     handler: () => {
-      response.end('Hello world');
+      const message = 'hello world';
+      return message;
     },
   },
 
