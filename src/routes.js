@@ -1,3 +1,4 @@
+const { response } = require('@hapi/hapi/lib/validation');
 const {
   addNoteHandler,
   getAllNotesHandler,
@@ -41,6 +42,13 @@ const routes = [
     method: 'DELETE',
     path: '/notes/{id}',
     handler: deleteNoteByIdHandler,
+  },
+  {
+    method: 'GET',
+    path: '/',
+    handler: () => {
+      response.end('Hello world');
+    },
   },
 
 ];
